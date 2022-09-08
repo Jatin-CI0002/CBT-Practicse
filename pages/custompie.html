@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Bethany's Pie Shop!</title>
+    <meta name="author" content="Bethany's Pie Shop" />
+    <meta name="description" content="Store front for Bethany's Pie Shop" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      #options {
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      #meringue path {
+        transform-origin: 200px 200px;
+      }
+
+      #meringue path:nth-of-type(1) {
+        transform: rotate(0deg);
+      }
+
+      #meringue path:nth-of-type(2) {
+        transform: rotate(60deg);
+      }
+
+      #meringue path:nth-of-type(3) {
+        transform: rotate(120deg);
+      }
+
+      #meringue path:nth-of-type(4) {
+        transform: rotate(180deg);
+      }
+
+      #meringue path:nth-of-type(5) {
+        transform: rotate(240deg);
+      }
+
+      #meringue path:nth-of-type(6) {
+        transform: rotate(300deg);
+      }
+
+      .animate {
+        transition: all 1s;
+      }
+      .container {
+        display: flex;
+      }
+      form {
+        display: block;
+        align-items: center;
+      }
+      fieldset {
+        border: 3px solid #a593c2;
+        border-radius: 10px;
+        margin-top: 1px;
+        padding: 10px;
+      }
+      fieldset > legend {
+        color: #cf4522;
+      }
+
+      .btn {
+        padding: 10px;
+        margin: 5px 0px 0px 5px;
+        width: 40%;
+        text-align: center;
+        border: 3px solid #a593c2;
+        border-radius: 10px;
+        background-color: #a593c2;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        /* columns: grey; */
+      }
+
+      @media only screen and (max-width: "50%") {
+        body {
+          display: block;
+          margin: 1em;
+          background-color: ghostwhite;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="mainheader">
+      <nav>
+        <ul>
+          <li><img src="../images/cake.svg" height="55" /></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/pieoverview.html">All pies</a></li>
+          <li><a href="pages/about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="mainContent">
+      <aside class="leftmenu">
+        <a href="../index.html"><img src="../images/bethanylogo.png" /></a>
+        <header>
+          <h4 style="text-align: center">Browse our pies</h4>
+        </header>
+        <ul>
+          <a href="../pages/pieoverview.html"><li>All pies</li></a>
+          <a href="../pages/cheesecakes.html"><li>Cheese cakes</li></a>
+          <a href="../pages/fruitpies.html"><li>Fruit pies</li></a>
+          <a href="../pages/seasonalpies.html"><li>Seasonal pies</li></a>
+          <a href="../pages/custompie.html"><li>Custom Pie</li></a>
+        </ul>
+      </aside>
+      <main class="main">
+        <article>
+          <div class="container">
+            <svg
+              id="display"
+              xmlns="http://www.w3.org/2000/svg"
+              width="400"
+              height="400"
+            >
+              <rect x="0" y="0" width="400" height="400" fill="transparent" />
+              <circle
+                class="animate"
+                id="crust-outer"
+                cx="200"
+                cy="200"
+                r="150"
+                fill="transparent"
+              />
+              <circle
+                class="animate"
+                id="crust-inner"
+                cx="200"
+                cy="200"
+                r="110"
+                fill="transparent"
+              />
+              <circle
+                class="animate"
+                id="filling"
+                cx="200"
+                cy="200"
+                r="140"
+                fill="transparent"
+              />
+              <g class="animate" id="meringue" style="display: none">
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="130"
+                  fill="white"
+                  stroke="#b3702d"
+                />
+                <path
+                  d="M 200 200 q 65 -65 0 -130"
+                  stroke="#b3702d"
+                  fill="transparent"
+                />
+                <path
+                  d="M 200 200 q 65 -65 0 -130"
+                  stroke="#b3702d"
+                  fill="transparent"
+                />
+                <path
+                  d="M 200 200 q 65 -65 0 -130"
+                  stroke="#b3702d"
+                  fill="transparent"
+                />
+                <path
+                  d="M 200 200 q 65 -65 0 -130"
+                  stroke="#b3702d"
+                  fill="transparent"
+                />
+                <path
+                  d="M 200 200 q 65 -65 0 -130"
+                  stroke="#b3702d"
+                  fill="transparent"
+                />
+                <path
+                  d="M 200 200 q 65 -65 0 -130"
+                  stroke="#b3702d"
+                  fill="transparent"
+                />
+              </g>
+              <text
+                x="200"
+                y="30"
+                text-anchor="middle"
+                font-family="sans-serif"
+                fill="#a593c2"
+                font-size="25"
+              >
+                <tspan fill="#4dcfa8" font-weight="bold">Bethany's</tspan>
+                Custom Pie Maker
+              </text>
+            </svg>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="conatiner">
+                            <p id="order-details-crust"></p>
+                            <p id="order-details-filling"></p>
+                            <p id="order-details-topping"></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal End -->
+            <div id="options">
+              <fieldset>
+                <legend>Please Choose a crust</legend>
+                <input
+                  type="radio"
+                  id="nonec"
+                  name="crust"
+                  value="none"
+                  checked
+                /><label for="nonec">None</label><br />
+                <input
+                  type="radio"
+                  id="pastry"
+                  name="crust"
+                  value="pastry"
+                /><label for="pastry">Pastry</label><br />
+                <input
+                  type="radio"
+                  id="graham"
+                  name="crust"
+                  value="graham"
+                /><label for="graham">Graham</label><br />
+                <input
+                  type="radio"
+                  id="chocolate"
+                  name="crust"
+                  value="chocolate"
+                /><label for="chocolate">chocolate</label><br />
+              </fieldset>
+
+              <fieldset>
+                <legend>Please Choose a filling</legend>
+                <input
+                  type="radio"
+                  id="nonef"
+                  name="filling"
+                  value="none"
+                  checked
+                /><label for="nonef">None</label><br />
+                <input
+                  type="radio"
+                  id="lime"
+                  name="filling"
+                  value="lime"
+                /><label for="lime">Key Lime</label><br />
+                <input
+                  type="radio"
+                  id="pumpkin"
+                  name="filling"
+                  value="pumpkin"
+                /><label for="pumpkin">Pumpkin</label><br />
+                <input
+                  type="radio"
+                  id="lemon"
+                  name="filling"
+                  value="lemon"
+                /><label for="lemon">Lemon</label><br />
+              </fieldset>
+
+              <fieldset>
+                <legend>Please choose a topping</legend>
+                <input
+                  type="radio"
+                  id="nonet"
+                  name="topping"
+                  value="none"
+                  checked
+                /><label for="nonet">None</label>
+                <input
+                  type="radio"
+                  id="merin"
+                  name="topping"
+                  value="meringue"
+                /><label for="merin">Meringue</label>
+              </fieldset>
+              <input
+                class="btn"
+                type="submit"
+                value="Order Pie"
+                onclick="makeOrder()"
+                data-bs-toggle="modal" data-bs-target="#exampleModal"
+              />
+              <button class="btn" id="animate">Explode</button>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <footer>
+      <p>Our address is</p>
+      <address>Bethany's Pie Shop - Bakery Street 555 Brussels Belgium</address>
+      <p><small>&copy; 2020 Bethany's Pie Shop - All rights reserved</small></p>
+      <p>Contact us via <a href="mailto:info@bethanyspieshop.com">email</a></p>
+    </footer>
+    <script>
+      let orderDetails = {
+        crust: "",
+        filling: "",
+        topping: "",
+      };
+      const crustElements = document.querySelectorAll("[name=crust]");
+      const outerCrust = document.getElementById("crust-outer");
+      const innerCrust = document.getElementById("crust-inner");
+      const filling = document.getElementById("filling");
+      const meringue = document.getElementById("meringue");
+      const crustDetails = document.getElementById("order-details-crust");
+      const fillingDetails = document.getElementById("order-details-filling");
+      const toppingDetails = document.getElementById("order-details-topping"); 
+      document.getElementById("options").addEventListener("change", (e) => {
+        switch (e.target.name) {
+          case "crust":
+            let colors = [];
+            switch (e.target.value) {
+              case "none":
+                colors = ["transparent", "transparent"];
+                break;
+              case "pastry":
+                colors = ["#DECCB8", "#F2DFC9"];
+                break;
+              case "graham":
+                colors = ["#BA870D", "#DEA010"];
+                break;
+              case "chocolate":
+                colors = ["#2E1802", "#422303"];
+                break;
+              default:
+                return;
+            }
+            innerCrust.setAttribute("fill", colors[0]);
+            outerCrust.setAttribute("fill", colors[1]);
+            break;
+          case "filling":
+            switch (e.target.value) {
+              case "none":
+                filling.setAttribute("fill", "transparent");
+                break;
+              case "lime":
+                filling.setAttribute("fill", "#DFF5A2");
+                break;
+              case "pumpkin":
+                filling.setAttribute("fill", "#BD7502");
+                break;
+              case "lemon":
+                filling.setAttribute("fill", "#FFF4BD");
+                break;
+            }
+          case "topping":
+            switch (e.target.value) {
+              case "none":
+                meringue.style.display = "none";
+                break;
+              case "meringue":
+                meringue.style.display = "";
+                break;
+            }
+        }
+
+        if (e.target.name === "crust")
+         orderDetails.crust = e.target.value;
+        else if (e.target.name === "filling")
+          orderDetails.filling = e.target.value;
+        else 
+            orderDetails.topping = e.target.value;
+      });
+
+      const animateButton = document.getElementById("animate");
+      let exploded = false;
+      animateButton.addEventListener("click", function () {
+        if (exploded) {
+          animateButton.innerHTML = "Ressemble";
+          outerCrust.style.transform = "translate(0,0) scale(1)";
+          innerCrust.style.transform = "translate(0,0) scale(1)";
+          filling.style.transform = "translate(0,0) scale(1)";
+          meringue.style.transform = "translate(0,0) scale(1)";
+        } else {
+          animateButton.innerHTML = "Expolde";
+          outerCrust.style.transform = "translate(-20px,20px) scale(0.6)";
+          innerCrust.style.transform = "translate(-20px,20px) scale(0.6)";
+          filling.style.transform = "translate(180px,20px) scale(0.6)";
+          meringue.style.transform = "translate(80px,180px) scale(0.6)";
+        }
+        exploded = !exploded;
+      });
+      function makeOrder() {
+        sessionStorage.setItem("orderDetails",JSON.stringify(orderDetails));
+        let data = JSON.parse(sessionStorage.getItem("orderDetails"));
+        crustDetails.innerHTML = "You want " + `<b>${data.crust}</b>` + " as crust";
+        fillingDetails.innerHTML = "filled with " + `<b>${data.filling}</b>`;
+        toppingDetails.innerHTML = "and having sprinkes of " + `<b>${data.topping}</b>`;
+        console.log(data.crust);
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>
